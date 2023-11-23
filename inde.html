@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goft Code</title>
+</head>
+<body>
+    <script>
+
+        /*
+ Golf Code:
+
+In the game of golf, each hole has a part that represents the average number of strokes a golfer is expected to make to hit the ball into the hole.
+
+There is a different name depending on how far above or below par your shots are. Your function will take the arguments even and hits.
+
+Returns the correct string according to this table that shows the hits in order of highest to lowest priority.
+
+Hits                                       Return
+
+ ===================================
+
+1                                           “Hole-in-one!
+
+≤ pair- 2                                 “Eagle”
+
+pair - 1                                    “Birdie”
+
+pair                                       “Pair”
+
+pair+ 1                                   “Bogey”
+
+pair + 2                                   “Double Bogey”
+
+≥ pair + 3                                “Go Home”
+
+ ====================================
+
+Par and strokes will always be numerical and positive
+        
+        
+        */
+function pointOfGolf (pair, hits) {
+    if (hits == 1) {
+        return "Hole-in-One";
+    } else if (hits <= pair - 2){
+        return "Eagle";
+
+    } else if (hits == pair - 1){
+        return "Birdie";
+
+    } else if ( hits == pair) {
+        return "Pair";
+
+    } else if (hits == pair + 1 ) {
+        return "Bogey";
+
+    } else if (hits == pair + 2){
+        return "Double Bogey";
+
+    } else if (hits >= +3) {
+        return "Go Home";
+    }
+}
+
+console.log(pointOfGolf(4, 7));
+
+    </script>
+    
+</body>
+</html>
